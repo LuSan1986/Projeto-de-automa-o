@@ -52,7 +52,7 @@ time.sleep(4)
 
 
 
-for linha in tabela.index:
+for linha in tabela.index: # Para cada linha da minha tabela.
     pyautogui.click(x=461, y=227)
 
     #codigo
@@ -94,7 +94,7 @@ for linha in tabela.index:
     #Obs
     time.sleep(1)
     obs = str(tabela.loc[linha,"obs"])
-    if obs != "nan":
+    if obs != "nan": # != diferente de nan (Nan é vazio)
         pyautogui.write(str(obs))
         
     pyautogui.press("tab")
